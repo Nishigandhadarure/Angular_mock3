@@ -1,0 +1,31 @@
+
+<div class="form">
+   
+              <h1>Entery Form</h1>
+       <br/>
+        <mat-form-field>
+            <label><b>Enter Your First Name:</b></label>
+            <input  matInput [(ngModel)]="user.first_name"  name= 'first_name'   type='text' required>
+        </mat-form-field>
+        <mat-form-field>
+            <label><b>Enter Your Last Name:</b></label>
+            <input   matInput [(ngModel)]="user.last_name" name='last_name' type='text' required> 
+       </mat-form-field>
+       <mat-form-field>
+            <label><b>Enter Your Email_Id:</b></label>
+            <input  matInput [(ngModel)]="user.email" name='email' type="text"required>
+       </mat-form-field><br/><br/>
+        <mat-form-field>   
+            <label><b>Enter Your Gender:</b></label>
+            <input  matInput [(ngModel)]="user.gender"  name='gender' type='text' required>
+      </mat-form-field> 
+      <mat-form-field>  
+      <label><b>Enter Your Ip-Address:</b></label>
+      <input  matInput  [(ngModel)]="user.ip_address"  name='ip_address'  required>
+       </mat-form-field><br/><br/>
+      <mat-form-field>
+            <button mat-button  (click)="takeUser()" type="submit" color="primary" >Submit</button>
+       </mat-form-field>
+    
+</div>
+<app-display [users]="users"></app-display>
